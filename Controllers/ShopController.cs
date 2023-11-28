@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Fruitkha.Data;
+using Fruitkha.Entities;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Fruitkha.Controllers
 {
@@ -6,7 +8,8 @@ namespace Fruitkha.Controllers
 	{
 		public IActionResult Shop()
 		{
-			return View();
+			List<Product> products = ProductRepository.GetProducts();
+			return View(products);
 		}
 
 		public IActionResult SingleProduct()

@@ -1,0 +1,11 @@
+﻿@model Fruitkha.Entities.Product;
+<div class="col-lg-4 col-md-6 text-center">
+	<div class="single-product-item">
+		<div class="product-image">
+			<a asp-action="SingleProduct" asp-controller="Shop"><img src="~/assets/img/products/@Model.ImgName" alt=""></a>
+		</div>
+		<h3>@Model.Name</h3>
+		<p class="product-price"><span>Per Kg</span> @Model.Price$ </p>
+		<a asp-action="Cart" asp-controller="Cart" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+	</div>
+</div>
